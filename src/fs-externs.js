@@ -7,56 +7,56 @@
 
 // eslint-disable-next-line no-undef
 Module.FS = class {
-  constructor() {
-      this.ErrnoError = class { };
-  }
+    constructor() {
+        this.ErrnoError = class { };
+    }
 
-  mount() { }
+    mount() { }
 
-  isRoot() { }
+    isRoot() { }
 
-  isFile() { }
+    isFile() { }
 
-  isDir() { }
+    isDir() { }
 
-  stat() { }
+    stat() { }
 
-  /** @return {FSNode} */
-  lookupPath() { }
+    /** @return {FSNode} */
+    lookupPath() { }
 
-  /** @return {FSNode} */
-  lookupNode() { }
+    /** @return {FSNode} */
+    lookupNode() { }
 
-  /** @return {FSNode} */
-  createNode() { }
+    /** @return {FSNode} */
+    createNode() { }
 
-  /** @return {FSNode} */
-  mknod() { }
+    /** @return {FSNode} */
+    mknod() { }
 };
 
 // eslint-disable-next-line no-undef
 Module.FS.FSNode = class {
-  constructor() {
-      this.node_ops = {
-          getattr: () => { },
-          setattr: () => { },
-          lookup: () => { },
-          mknod: () => { },
-          rename: () => { },
-          unlink: () => { },
-          rmdir: () => { },
-          reaaddir: () => { },
-          symlink: () => { },
-          readlink: () => { }
-      };
+    constructor() {
+        this.node_ops = {
+            getattr: () => { },
+            setattr: () => { },
+            lookup: () => { },
+            mknod: () => { },
+            rename: () => { },
+            unlink: () => { },
+            rmdir: () => { },
+            reaaddir: () => { },
+            symlink: () => { },
+            readlink: () => { }
+        };
 
-      this.stream_ops = {
-          llseek: () => { },
-          read: () => { },
-          write: () => { },
-          allocate: () => { },
-          mmap: () => { },
-          msync: () => { }
-      };
-  }
+        this.stream_ops = {
+            llseek: () => { },
+            read: () => { },
+            write: () => { },
+            allocate: () => { },
+            mmap: () => { },
+            msync: () => { }
+        };
+    }
 };
